@@ -30,6 +30,11 @@ radio.onReceivedNumber(function (receivedNumber) {
         basic.showString("" + (speed))
     } else if (instrukcja == 7) {
         music.playTone(247, music.beat(BeatFraction.Whole))
+    } else if (instrukcja == 8) {
+        maqueen.motorStop(maqueen.Motors.All)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 150)
+        basic.pause(500)
+        maqueen.motorStop(maqueen.Motors.All)
     } else {
     	
     }
